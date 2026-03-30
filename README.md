@@ -1,8 +1,48 @@
-# React + Vite
+# To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean task manager built with React + Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add tasks by typing and pressing **Enter** or clicking the **+** button
+- Mark tasks as complete by clicking the circle checkbox
+- Remove individual tasks with the trash icon
+- Clear all completed tasks at once with the **"Limpar concluídas"** button
+- Pending task count displayed as a badge in the header
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) v16 or higher
+- npm (comes with Node.js)
+
+### Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/to-do-list.git
+cd to-do-list
+npm install
+```
+
+### Running locally
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Building for production
+
+```bash
+npm run build
+```
+
+The output will be in the `dist/` folder.
+
+## Tech Stack
+
+- [React 18](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/)
