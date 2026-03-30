@@ -1,0 +1,236 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  background: #f2f2f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+  color: #1c1c1e;
+}
+
+#root {
+  width: 100%;
+  max-width: 480px;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 0 4px;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1c1c1e;
+}
+
+.badge {
+  background: #007aff;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+/* Input row */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.input-row input {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 16px;
+  font-family: inherit;
+  background: white;
+  color: #1c1c1e;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+
+.input-row input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+
+.input-row input::placeholder {
+  color: #aeaeb2;
+}
+
+.add-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  background: #007aff;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.add-btn:hover:not(:disabled) {
+  background: #0066d6;
+}
+
+.add-btn:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.add-btn:disabled {
+  background: #c7c7cc;
+  cursor: not-allowed;
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: opacity 0.2s;
+}
+
+.task-list li:first-child {
+  border-radius: 12px 12px 4px 4px;
+}
+
+.task-list li:last-child {
+  border-radius: 4px 4px 12px 12px;
+}
+
+.task-list li:only-child {
+  border-radius: 12px;
+}
+
+.task-list li.done {
+  opacity: 0.5;
+}
+
+/* Check button */
+.check-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #c7c7cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.done .circle {
+  background: #34c759;
+  border-color: #34c759;
+}
+
+/* Task text */
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.4;
+  transition: text-decoration 0.2s;
+}
+
+.done .task-text {
+  text-decoration: line-through;
+  color: #8e8e93;
+}
+
+/* Remove button */
+.remove-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #c7c7cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.remove-btn:hover {
+  color: #ff3b30;
+  background: #fff1f0;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  color: #aeaeb2;
+  font-size: 15px;
+  padding: 32px 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* Clear button */
+.clear-btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: none;
+  color: #ff3b30;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.clear-btn:hover {
+  background: #fff1f0;
+}
